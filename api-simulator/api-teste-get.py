@@ -1,12 +1,12 @@
 from flask import Flask, jsonify, render_template_string
 import requests
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from zoneinfo import ZoneInfo
 
 app = Flask(__name__)
 
 CHANNEL_ID = "3382097"
-BR_TZ = ZoneInfo("America/Sao_Paulo")
+BR_TZ = timezone(timedelta(hours=-3))
 
 # =========================
 # HTML COMPLETO
